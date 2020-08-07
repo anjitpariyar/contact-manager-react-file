@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body{
+     font-family: 'Poppins', sans-serif;
+     font-weight: 400;
+     background-color: #3e3e3e;
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-size: 18px;
+     color:#eee;
+     overflow-x: hidden;
+}
+
+.App{
+     width:min(90%, 500px);
+     margin: 2em auto;
+     padding: 4em;
+     background: linear-gradient(145deg, #353535, #474747);
+     border-radius: 1em;
+     box-shadow: 9.91px 9.91px 15px #383838, -9.91px -9.91px 15px #444444;
+}
+h1 {
+     font-size: 24px;
+     margin-top: 0;
+     font-weight: 400;
+     animation: transform 10s ease-in-out 0s infinite forwards ;
+}
+form{
+     position: sticky;
+     top: 1em;
+     z-index: 9;
+}
+input {
+     height: 60px;
+     width: 70%;
+     padding: 0 1em;
+     font-size: 1em;
+     margin: 1em 0;
+     border-radius: 8px 0px 0 8px;
+     border: 0;
+     box-shadow:inset 2.91px 2.91px 4px #707070,inset 0.09px -1.91px 7px #fff;
+     transition: .3s ease-in;
+     box-sizing: border-box;
+     
+}
+input:focus, input:focus-within{
+     border-bottom:3px solid #007cff;
+     transition: .3s ease-out;
+     outline: 0;
+     
+}
+form button{
+     height: 63px;
+     width: 30%;
+     border: 0;
+     font-size: 1em;
+     background-color: #007cff;
+     color: #fff;
+     border-radius: 0 12px 8px 0;
+     box-shadow: inset -4px -4px #06498f;
+     transform: translateY(1px);
+     padding: 0;
+     cursor: pointer;
+}
+svg{
+     pointer-events: none;
+}
+
+ol {
+     padding-left: 0;
+     
+}
+li {
+     padding:0 0 0 1em;
+     background-color: #3a3a3a;
+     margin: 1em 0;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     border-radius: 8px;
+     overflow: hidden;
+}
+
+li button{
+     background-color: #a5283f;
+     border: 0;
+     font-size: 1.2em;
+     padding: 1em;
+     color: #eee;
+     cursor: pointer;
+     transition:.3s ease-in-out;    
+}
+li button:hover{
+     background-color: #8e2438;
+}
+
+@keyframes transform{
+     0%{transform:translateX(-120%) skew(30deg)}
+     100%{transform:translateX(120%) skew(-30deg)}
+     
+}
+
+
+/* responsive */
+
+@media (max-width:450px){
+     
+     .App{
+          width: 100% ;
+          margin: 0;
+          padding:1em 0em;
+     }
+     h1{
+          font-size:18px;
+          animation-duration: 8s;
+     }
+     form{
+          top: 0;
+          padding: 4px 1em;
+          background-color: #3939398f;
+     }
+     input{
+          height: 50px;
+     }
+     form button{
+          height: 53px;
+          width:auto;
+          padding: 0 1.5em;
+     }
+     li{
+          font-size: 16px;
+          margin: 1em;
+     }
+}
